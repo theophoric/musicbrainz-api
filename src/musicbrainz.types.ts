@@ -192,7 +192,7 @@ export interface IRelation {
   attributes?: any[];
   type: string;
   begin?: null | object;
-  'target-type'?: 'url';
+  'target-type'?: EntityType;
   'type-id': string;
   url?: IURL;
   release?: IRelease;
@@ -210,11 +210,17 @@ export interface IRelationList {
 export interface IWork {
   id: string;
   title: string;
+  type: string
+  iswcs: string[]
+  language: string
 }
 
 export interface ILabel {
   id: string;
   name: string;
+  type: string
+  disambiguation: string
+  "label-code": string
 }
 
 export interface IUrl {
